@@ -46,8 +46,8 @@ public class CourseServiceImpl implements CourseService {
         long courseId = course.getCourseId();
         for (Course tempCourse : courseList) {
             if (tempCourse.getCourseId() == courseId) {
-                courseList.remove(tempCourse);
-                courseList.add(course);
+                tempCourse.setCourseTitle(course.getCourseTitle());
+                tempCourse.setCourseDescription(course.getCourseDescription());
                 break;
             }
         }
