@@ -34,4 +34,10 @@ public class CourseServiceImpl implements CourseService {
         }
         return resultCourse;
     }
+
+    @Override
+    public Course addCourse(Course course) {
+        courseList.add(course);
+        return course;
+    }
 }
