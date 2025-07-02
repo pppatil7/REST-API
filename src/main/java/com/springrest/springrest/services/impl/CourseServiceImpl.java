@@ -40,4 +40,17 @@ public class CourseServiceImpl implements CourseService {
         courseList.add(course);
         return course;
     }
+
+    @Override
+    public Course updateCourse(Course course) {
+        long courseId = course.getCourseId();
+        for (Course tempCourse : courseList) {
+            if (tempCourse.getCourseId() == courseId) {
+                courseList.remove(tempCourse);
+                courseList.add(course);
+                break;
+            }
+        }
+        return course;
+    }
 }
