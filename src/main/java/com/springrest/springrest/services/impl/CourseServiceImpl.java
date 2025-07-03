@@ -1,66 +1,50 @@
 package com.springrest.springrest.services.impl;
 
+import com.springrest.springrest.dao.CourseDao;
 import com.springrest.springrest.entities.Course;
 import com.springrest.springrest.services.CourseService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
+
 
 @Service
 public class CourseServiceImpl implements CourseService {
 
-    List<Course> courseList;
+    @Autowired
+    private CourseDao courseDao;
+
 
     public CourseServiceImpl() {
-        courseList = new ArrayList<>();
-        courseList.add(new Course(1212, "Java", "Beginner Java Course"));
-        courseList.add(new Course(3233, "SpringBoot", "REST API creating using SpringBoot"));
+
     }
 
     @Override
     public List<Course> getAllCourses() {
-        return courseList;
+        return null;
     }
 
     @Override
     public Course getCourseByCourseId(long courseId) {
-        Course resultCourse = null;
-        for (Course course : courseList) {
-            if (course.getCourseId() == courseId) {
-                resultCourse = course;
-                break;
-            }
-        }
-        return resultCourse;
+
+        return null;
     }
 
     @Override
     public Course addCourse(Course course) {
-        courseList.add(course);
-        return course;
+
+        return null;
     }
 
     @Override
     public Course updateCourse(Course course) {
-        long courseId = course.getCourseId();
-        for (Course tempCourse : courseList) {
-            if (tempCourse.getCourseId() == courseId) {
-                tempCourse.setCourseTitle(course.getCourseTitle());
-                tempCourse.setCourseDescription(course.getCourseDescription());
-                break;
-            }
-        }
-        return course;
+
+        return null;
     }
 
     @Override
     public void deleteCourseByCourseId(long courseId) {
-        for (Course course : courseList) {
-            if (course.getCourseId() == courseId) {
-                courseList.remove(course);
-                break;
-            }
-        }
+
     }
 }
