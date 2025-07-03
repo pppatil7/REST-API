@@ -2,13 +2,13 @@ package com.springrest.springrest.entities;
 
 public class Course {
 
-    private long courseId;
+    private Long courseId;
 
     private String courseTitle;
 
     private String courseDescription;
 
-    public Course(long courseId, String courseTitle, String courseDescription) {
+    public Course(Long courseId, String courseTitle, String courseDescription) {
         this.courseId = courseId;
         this.courseTitle = courseTitle;
         this.courseDescription = courseDescription;
@@ -21,7 +21,7 @@ public class Course {
         return courseId;
     }
 
-    public void setCourseId(long courseId) {
+    public void setCourseId(Long courseId) {
         this.courseId = courseId;
     }
 
