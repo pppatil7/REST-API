@@ -1,1 +1,1 @@
-Project included REST APIs
+REST APIs related to Course
